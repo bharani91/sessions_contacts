@@ -1,0 +1,36 @@
+<head>
+	<title>
+		Contacts App
+	</title>
+</head>
+
+<body>
+	
+	<h1>Contacts App</h1>
+
+	{{> add_contact }}
+
+	{{> contact_list}}
+
+</body>
+
+
+<template name="contact_list">
+	<ul>
+		{{#each contacts}}
+			{{> contact_item }}
+		{{/each}}
+	</ul>
+</template>
+
+<template name="add_contact">
+	<form>
+		<input type="text" name="fullname" class="fullname">
+	</form>
+</template>
+
+<template name="contact_item">
+	<li>
+		{{name}}
+	</li>
+</template>
